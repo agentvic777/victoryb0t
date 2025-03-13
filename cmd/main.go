@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"victorytg/config"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	telegramToken, err := config.ExtractTelegramToken()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("Telegram Token: %s\n", telegramToken)
+
 }
