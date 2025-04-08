@@ -12,9 +12,10 @@ type Update struct {
 }
 
 type CallbackQuery struct {
-	ID   string `json:"id"`
-	From User   `json:"from"`
-	Data string `json:"data,omitempty"`
+	ID      string   `json:"id"`
+	From    User     `json:"from"`
+	Data    string   `json:"data,omitempty"`
+	Message *Message `json:"message,omitempty"`
 }
 
 type Message struct {
